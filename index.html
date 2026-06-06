@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Tabuleiro Eco | Reserva Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0;400;0;500;0;600;1;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="logo (1).jpeg" alt="Pousada Tabuleiro Eco" class="logo-img">
+        </div>
+        <nav class="nav-menu">
+            <a href="#pousada">A Pousada</a>
+            <a href="#experiencias">Experiências Eco</a>
+            <a href="#acomodacoes">Acomodações</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="header-action">
+            <a href="#motor-reservas" class="btn-book-now">RESERVAR ONLINE</a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="principal.jpeg" alt="Pousada Tabuleiro Eco" class="hero-bg">
+        
+        <div class="hero-content">
+            <h1>O destino ideal para quem busca paz, aventura e conexão com a natureza<br>Eco Hostel</h1>
+        </div>
+
+        <div id="motor-reservas" class="booking-bar-container">
+            <form action="https://motor-reservas-monjolo.vercel.app/" method="GET" class="booking-form">
+                <div class="booking-field">
+                    <label><i class="fa-regular fa-calendar"></i> CHECK-IN</label>
+                    <input type="date" required name="checkin" id="checkin">
+                </div>
+                <div class="booking-field">
+                    <label><i class="fa-regular fa-calendar"></i> CHECK-OUT</label>
+                    <input type="date" required name="checkout" id="checkout">
+                </div>
+                
+                <div class="booking-field">
+                    <label><i class="fa-solid fa-user"></i> ADULTOS</label>
+                    <select name="adultos">
+                        <option value="1">1 Adulto</option>
+                        <option value="2" selected>2 Adultos</option>
+                        <option value="3">3 Adultos</option>
+                        <option value="4">4 Adultos</option>
+                        <option value="5">5 Adultos</option>
+                        <option value="6">6 Adultos</option>
+                    </select>
+                </div>
+
+                <div class="booking-field">
+                    <label><i class="fa-solid fa-child"></i> CRIANÇAS</label>
+                    <select name="criancas">
+                        <option value="0" selected>0 Crianças</option>
+                        <option value="1">1 Criança</option>
+                        <option value="2">2 Crianças</option>
+                        <option value="3">3 Crianças</option>
+                        <option value="4">4 Crianças</option>
+                    </select>
+                </div>
+
+                <div class="booking-field button-field">
+                    <button type="submit" class="btn-search-booking">PESQUISAR TARIFAS</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="pousada" class="about-section">
+        <div class="container-grid">
+            <div class="about-text">
+                <span class="section-subtitle">BEM-VINDO AO REFÚGIO</span>
+                <h2>Conecte-se com a Natureza no seu Estado Mais Puro</h2>
+                <div class="divider left"></div>
+                <p>A <strong>Pousada Tabuleiro Eco Hostel</strong> nasceu do desejo de harmonizar o conforto de uma hospedagem de charme com o respeito absoluto ao meio ambiente. Localizada no coração do distrito do Tabuleiro, somos o ponto de partida perfeito para quem busca paz, renovação espiritual e contato íntimo com a biosfera da Serra do Espinhaço.</p>
+                <p>Nossa estrutura oferece o calor do acolhimento mineiro, arquitetura integrada à paisagem local e instalações pensadas para que casais, amigos e famílias desfrutem de dias inesquecíveis com total tranquilidade.</p>
+            </div>
+            <div class="about-image">
+                <img src="principal.jpeg" alt="Estrutura Pousada Tabuleiro Eco" class="about-img-file">
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencias" class="experiences-section">
+        <div class="section-header">
+            <span class="section-subtitle">TURISMO </span>
+            <h2>Experiências Exclusivas no Tabuleiro</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="experiences-grid">
+            <div class="exp-card">
+                <i class="fa-solid fa-water"></i>
+                <h3>Cachoeira do Tabuleiro</h3>
+                <p>Visite a maior queda d'água de Minas Gerais e a terceira maior do Brasil, situada a poucos minutos da nossa pousada.</p>
+            </div>
+            <div class="exp-card">
+                <i class="fa-solid fa-compass"></i>
+                <h3>Trilhas & Trekking</h3>
+                <p>Caminhadas guiadas por penhascos, mirantes naturais e vegetação nativa de transição entre Cerrado e Mata Atlântica.</p>
+            </div>
+            <div class="exp-card">
+                <i class="fa-solid fa-dove"></i>
+                <h3>Observação de Aves</h3>
+                <p>A região abriga espécies raras e endêmicas da avifauna, ideal para entusiastas da fotografia e da observação natural.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="acomodacoes" class="rooms-section">
+        <div class="section-header">
+            <span class="section-subtitle">ACOMODAÇÕES EXCLUSIVAS</span>
+            <h2>Nossas Suítes & Quartos</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="rooms-container">
+            <div class="room-card">
+                <div class="room-badge">Acessibilidade</div>
+                <div class="room-image-wrap">
+                    <img src="quartolaranja.jpeg" alt="Quarto Laranja" class="room-img-file zoomable-img">
+                </div>
+                <div class="room-details">
+                    <h3>Quarto Laranja</h3>
+                    <p class="room-description">Ideal para casal ou família. Totalmente adaptado para cadeirantes, equipado com ventilador, banheiro privativo e TV.</p>
+                    <div class="room-amenities">
+                        <span><i class="fa-solid fa-user-group"></i> Até 4 pessoas</span>
+                        <span><i class="fa-solid fa-bed"></i> Casal + Beliche</span>
+                    </div>
+                    <div class="room-price-row">
+                        <span class="price">Garantia de <b>Quarto Único</b></span>
+                        <a href="https://motor-reservas-monjolo.vercel.app/" class="btn-room-select">Escolher</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-badge">Ideal p/ Grupos</div>
+                <div class="room-image-wrap">
+                    <img src="quartoverde.jpeg" alt="Quarto Verde" class="room-img-file zoomable-img">
+                </div>
+                <div class="room-details">
+                    <h3>Quarto Verde</h3>
+                    <p class="room-description">Excelente espaço para grupos, com varanda e rede de descanso. Equipado com TV, banheiro otimizado e ventilador.</p>
+                    <div class="room-amenities">
+                        <span><i class="fa-solid fa-user-group"></i> Até 4 pessoas</span>
+                        <span><i class="fa-solid fa-bed"></i> Casal + 1 Beliche</span>
+                    </div>
+                    <div class="room-price-row">
+                        <span class="price">Garantia de <b>Quarto Único</b></span>
+                        <a href="https://motor-reservas-monjolo.vercel.app/" class="btn-room-select">Escolher</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-badge">Famílias Grandes</div>
+                <div class="room-image-wrap">
+                    <img src="quartozaul.jpeg" alt="Quarto Azul" class="room-img-file zoomable-img">
+                </div>
+                <div class="room-details">
+                    <h3>Quarto Azul</h3>
+                    <p class="room-description">Perfeito para famílias grandes ou grupos de até 6 pessoas. Possui varanda com rede, TV, banheiro otimizado e ventilador.</p>
+                    <div class="room-amenities">
+                        <span><i class="fa-solid fa-user-group"></i> Até 6 pessoas</span>
+                        <span><i class="fa-solid fa-bed"></i> Casal + 2 Beliches</span>
+                    </div>
+                    <div class="room-price-row">
+                        <span class="price">Garantia de <b>Quarto Único</b></span>
+                        <a href="https://motor-reservas-monjolo.vercel.app/" class="btn-room-select">Escolher</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-badge">Grandes Grupos</div>
+                <div class="room-image-wrap">
+                    <img src="quartovermelho.jpeg" alt="Quarto Vermelho" class="room-img-file zoomable-img">
+                </div>
+                <div class="room-details">
+                    <h3>Quarto Vermelho</h3>
+                    <p class="room-description">Acomodação muito espaçosa para famílias numerosas. Equipado com varanda com rede, TV, banheiro otimizado e ventilador.</p>
+                    <div class="room-amenities">
+                        <span><i class="fa-solid fa-user-group"></i> Até 6 pessoas</span>
+                        <span><i class="fa-solid fa-bed"></i> Casal + 2 Beliches</span>
+                    </div>
+                    <div class="room-price-row">
+                        <span class="price">Garantia de <b>Quarto Único</b></span>
+                        <a href="https://motor-reservas-monjolo.vercel.app/" class="btn-room-select">Escolher</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-badge">Conforto</div>
+                <div class="room-image-wrap">
+                    <img src="quartocreme.jpeg" alt="Quarto Creme" class="room-img-file zoomable-img">
+                </div>
+                <div class="room-details">
+                    <h3>Quarto Creme</h3>
+                    <p class="room-description">Ambiente tranquilo com poltrona de descanso e varanda externa. Equipado com ventilador, banheiro privativo e TV.</p>
+                    <div class="room-amenities">
+                        <span><i class="fa-solid fa-user-group"></i> Até 4 pessoas</span>
+                        <span><i class="fa-solid fa-bed"></i> Casal + Beliche</span>
+                    </div>
+                    <div class="room-price-row">
+                        <span class="price">Garantia de <b>Quarto Único</b></span>
+                        <a href="https://motor-reservas-monjolo.vercel.app/" class="btn-room-select">Escolher</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-badge">Aconchego</div>
+                <div class="room-image-wrap">
+                    <img src="quartorosa.jpeg" alt="Quarto Rosa" class="room-img-file zoomable-img">
+                </div>
+                <div class="room-details">
+                    <h3>Quarto Rosa</h3>
+                    <p class="room-description">Ambiente charmoso e acolhedor com excelente iluminação. Equipado com ventilador, banheiro privativo e TV.</p>
+                    <div class="room-amenities">
+                        <span><i class="fa-solid fa-user-group"></i> Até 4 pessoas</span>
+                        <span><i class="fa-solid fa-bed"></i> Casal + Beliche</span>
+                    </div>
+                    <div class="room-price-row">
+                        <span class="price">Garantia de <b>Quarto Único</b></span>
+                        <a href="https://motor-reservas-monjolo.vercel.app/" class="btn-room-select">Escolher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery-section">
+        <div class="section-header">
+            <span class="section-subtitle">VIVA ESSA EXPERIÊNCIA</span>
+            <h2>Nossa Atmosfera em Fotos</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="principal.jpeg" alt="Área Externa Pousada" class="zoomable-img">
+                <div class="gallery-overlay"><span>Área Externa & Natureza</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (2).jpeg" alt="Detalhes das Suítes" class="zoomable-img">
+                <div class="gallery-overlay"><span>Aconchego Interno</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (3).jpeg" alt="Varandas com Rede" class="zoomable-img">
+                <div class="gallery-overlay"><span>Nossas Varandas</span></div>
+            </div>
+            <div class="gallery-item tall">
+                <img src="img/foto (4).jpeg" alt="Estrutura de Acolhimento" class="zoomable-img">
+                <div class="gallery-overlay"><span>Espaço para Famílias</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (5).jpeg" alt="Vivência Eco" class="zoomable-img">
+                <div class="gallery-overlay"><span>Estrutura Rústica</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (6).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (7).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (8).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (10).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (11).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (12).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/foto (13).jpeg" alt="Descanso e Paz" class="zoomable-img">
+                <div class="gallery-overlay"><span>Momentos de Paz</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="image-detail-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content-img" id="imgExpanded">
+        <div id="modalCaption"></div>
+    </div>
+
+    <footer id="contato" class="main-footer">
+        <div class="footer-top-wrapper">
+            <div class="footer-brand-column">
+<img src="logo (3).jpeg" alt="Pousada Tabuleiro Eco" class="footer-logo">
+                <p class="brand-pitch">O equilíbrio perfeito entre o turismo sustentável, o respeito à natureza e o aconchego acolhedor na região do Tabuleiro.</p>
+                <div class="social-badges">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#pousada"><i class="fa-solid fa-chevron-right"></i> A Pousada</a></li>
+                    <li><a href="#experiencias"><i class="fa-solid fa-chevron-right"></i> Experiências Eco</a></li>
+                    <li><a href="#acomodacoes"><i class="fa-solid fa-chevron-right"></i> Acomodações</a></li>
+                    <li><a href="#galeria"><i class="fa-solid fa-chevron-right"></i> Galeria de Fotos</a></li>
+                    <li><a href="https://motor-reservas-monjolo.vercel.app/"><i class="fa-solid fa-chevron-right"></i> Motor de Reservas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Políticas & Info</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Reserva Segura</a></li>
+                    <li><a href="#"><i class="fa-solid fa-ban-smoking"></i> Regras da Pousada</a></li>
+                    <li><a href="#"><i class="fa-solid fa-clock"></i> Check-in: 14h | Out: 12h</a></li>
+                    <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Termos de Cancelamento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-column">
+                <h4>Central de Atendimento</h4>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div>
+                        <span class="label">Telefone / WhatsApp</span>
+                        <span class="value">(31) 99888-1122</span>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <div>
+                        <span class="label">E-mail Oficial</span>
+                        <span class="value">reservas@pousadatabuleiroeco.com</span>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span class="label">Localização</span>
+                        <span class="value">Distrito do Tabuleiro, MG, Brasil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pousada Tabuleiro Eco. Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgExpanded");
+        const captionText = document.getElementById("modalCaption");
+        const closeBtn = document.getElementsByClassName("close-modal")[0];
+
+        document.querySelectorAll('.zoomable-img').forEach(image => {
+            image.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                document.body.style.overflow = "hidden";
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+</body>
+</html>
