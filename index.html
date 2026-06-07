@@ -14,13 +14,22 @@
         <div class="logo-container">
             <img src="logo (1).jpeg" alt="Pousada Tabuleiro Eco" class="logo-img">
         </div>
-        <nav class="nav-menu">
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
             <a href="#pousada">A Pousada</a>
             <a href="#experiencias">Experiências Eco</a>
             <a href="#acomodacoes">Acomodações</a>
             <a href="#galeria">Galeria</a>
             <a href="#contato">Contato</a>
+            <div class="header-action-mobile">
+                <a href="#motor-reservas" class="btn-book-now btn-nav-mobile">RESERVAR ONLINE</a>
+            </div>
         </nav>
+        
         <div class="header-action">
             <a href="#motor-reservas" class="btn-book-now">RESERVAR ONLINE</a>
         </div>
@@ -47,25 +56,29 @@
                 
                 <div class="booking-field">
                     <label><i class="fa-solid fa-user"></i> ADULTOS</label>
-                    <select name="adultos">
-                        <option value="1">1 Adulto</option>
-                        <option value="2" selected>2 Adultos</option>
-                        <option value="3">3 Adultos</option>
-                        <option value="4">4 Adultos</option>
-                        <option value="5">5 Adultos</option>
-                        <option value="6">6 Adultos</option>
-                    </select>
+                    <div class="select-wrapper">
+                        <select name="adultos">
+                            <option value="1">1 Adulto</option>
+                            <option value="2" selected>2 Adultos</option>
+                            <option value="3">3 Adultos</option>
+                            <option value="4">4 Adultos</option>
+                            <option value="5">5 Adultos</option>
+                            <option value="6">6 Adultos</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="booking-field">
                     <label><i class="fa-solid fa-child"></i> CRIANÇAS</label>
-                    <select name="criancas">
-                        <option value="0" selected>0 Crianças</option>
-                        <option value="1">1 Criança</option>
-                        <option value="2">2 Crianças</option>
-                        <option value="3">3 Crianças</option>
-                        <option value="4">4 Crianças</option>
-                    </select>
+                    <div class="select-wrapper">
+                        <select name="criancas">
+                            <option value="0" selected>0 Crianças</option>
+                            <option value="1">1 Criança</option>
+                            <option value="2">2 Crianças</option>
+                            <option value="3">3 Crianças</option>
+                            <option value="4">4 Crianças</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="booking-field button-field">
@@ -300,14 +313,14 @@
 
     <div id="imageModal" class="image-detail-modal">
         <span class="close-modal">&times;</span>
-        <img class="modal-content-img" id="imgExpanded">
+        <img class="modal-content-img" id="imgExpanded" alt="Imagem ampliada">
         <div id="modalCaption"></div>
     </div>
 
     <footer id="contato" class="main-footer">
         <div class="footer-top-wrapper">
             <div class="footer-brand-column">
-<img src="logo (3).jpeg" alt="Pousada Tabuleiro Eco" class="footer-logo">
+                <img src="logo (3).jpeg" alt="Pousada Tabuleiro Eco" class="footer-logo">
                 <p class="brand-pitch">O equilíbrio perfeito entre o turismo sustentável, o respeito à natureza e o aconchego acolhedor na região do Tabuleiro.</p>
                 <div class="social-badges">
                     <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -369,6 +382,29 @@
     </footer>
 
     <script>
+        // Lógica do Menu Hambúrguer Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if(navMenu.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        });
+
+        // Fechar o menu ao clicar em qualquer link interna
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+            });
+        });
+
+        // Lógica do Modal de Zoom das Imagens
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("imgExpanded");
         const captionText = document.getElementById("modalCaption");
@@ -395,6 +431,5 @@
             }
         }
     </script>
-
 </body>
 </html>
