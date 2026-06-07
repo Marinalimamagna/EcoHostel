@@ -58,7 +58,7 @@ body {
     object-fit: contain;
 }
 
-/* Botão do Menu Hambúrguer (Escondido por padrão no Desktop) */
+/* Botão do Menu Hambúrguer */
 .menu-toggle {
     display: none; 
     background: none;
@@ -109,13 +109,13 @@ body {
 }
 
 /* ==========================================================================
-   Hero Section (Banner Principal Adaptado p/ Mobile)
+   Hero Section (Banner Principal Adaptado)
    ========================================================================== */
 .hero-section {
     position: relative;
     width: 100%;
-    height: 70vh; /* Aumentado para melhor visual no mobile */
-    min-height: 450px;
+    height: 65vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +141,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Overlay ligeiramente mais escuro p/ contraste */
+    background: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
 
@@ -149,30 +149,30 @@ body {
     text-align: center;
     color: #fff;
     padding: 0 20px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     max-width: 800px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 400;
     text-shadow: 0 2px 15px rgba(0,0,0,0.6);
     line-height: 1.3;
 }
 
 /* ==========================================================================
-   Barra do Motor de Reservas (Clean e Mobile-Friendly)
+   Barra do Motor de Reservas
    ========================================================================== */
 .booking-bar-container {
     background-color: #ffffff;
-    padding: 25px;
+    padding: 20px 25px;
     border-radius: 12px;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
     width: 90%;
     max-width: 1100px;
     position: absolute;
-    bottom: -60px;
+    bottom: -50px;
     z-index: 10;
     border: 1px solid #f0f0f0;
 }
@@ -208,7 +208,7 @@ body {
 
 .booking-field input, 
 .booking-field select {
-    padding: 14px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 14px;
@@ -216,7 +216,7 @@ body {
     outline: none;
     background-color: #ffffff;
     width: 100%;
-    height: 52px;
+    height: 48px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -238,7 +238,7 @@ body {
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
     width: 100%;
-    height: 52px;
+    height: 48px;
 }
 
 .btn-search-booking:hover {
@@ -247,7 +247,7 @@ body {
 }
 
 /* ==========================================================================
-   Seção: A Pousada Institutional
+   Seções Restantes (A Pousada, Experiências, Acomodações)
    ========================================================================== */
 .about-section {
     padding: 140px 5% 70px 5%;
@@ -280,6 +280,9 @@ body {
 
 .divider.left {
     margin: 15px 0 30px 0;
+    width: 70px;
+    height: 2px;
+    background-color: var(--gold-accent);
 }
 
 .about-image {
@@ -295,9 +298,6 @@ body {
     object-fit: cover;
 }
 
-/* ==========================================================================
-   Seção: Experiências Eco
-   ========================================================================== */
 .experiences-section {
     padding: 70px 5%;
     background-color: var(--light-neutral);
@@ -344,9 +344,6 @@ body {
     color: #666;
 }
 
-/* ==========================================================================
-   Seção de Acomodações
-   ========================================================================== */
 .rooms-section {
     padding: 70px 5%;
     max-width: 1400px;
@@ -501,38 +498,33 @@ body {
     font-weight: 600;
     border-radius: 4px;
     transition: all 0.3s;
-    text-align: center;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
 }
 
 .btn-room-select:hover {
     background-color: var(--eco-green-accent);
-    color: white;
+    color: #fff;
 }
 
 /* ==========================================================================
    Galeria de Fotos
-   ========================================================================= */
+   ========================================================================== */
 .gallery-section {
     padding: 70px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: 200px;
-    grid-gap: 15px;
-    grid-auto-flow: dense;
+    gap: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     cursor: pointer;
 }
 
@@ -540,7 +532,40 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 34, 27, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    text-align: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--gold-accent);
+    padding-bottom: 5px;
 }
 
 .gallery-item.large {
@@ -552,77 +577,36 @@ body {
     grid-row: span 2;
 }
 
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(27, 67, 30, 0.9), rgba(0, 0, 0, 0.2));
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.gallery-overlay span {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.07);
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-/* ==========================================================================
-   Visualizador de Imagens (Lightbox Modal)
-   ========================================================================== */
+/* Modal do Zoom */
 .image-detail-modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 9999; 
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 15, 11, 0.97); /* Fundo quase preto eco */
+    background-color: rgba(10, 15, 11, 0.95);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
 }
 
 .modal-content-img {
-    max-width: 90%;
+    max-width: 85%;
     max-height: 80vh;
-    object-fit: contain;
     border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-}
-
-#modalCaption {
-    color: #fff;
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0.5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .close-modal {
     position: absolute;
-    top: 20px;
-    right: 25px;
-    color: #ffffff;
-    font-size: 42px;
-    cursor: pointer;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
     font-weight: 300;
+    cursor: pointer;
     transition: color 0.3s;
 }
 
@@ -630,128 +614,158 @@ body {
     color: var(--gold-accent);
 }
 
+#modalCaption {
+    color: #ccc;
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
 /* ==========================================================================
-   Rodapé (Footer) Premium - COMO NA IMAGEM
+   Rodapé Premium (Footer)
    ========================================================================== */
 .main-footer {
-    background-color: var(--eco-green-dark); /* FUNDO VERDE ESCURO PREMIUM */
+    background-color: var(--eco-green-dark);
     color: var(--text-on-dark);
     padding: 80px 5% 30px 5%;
+    font-size: 14px;
+    border-top: 3px solid var(--gold-accent);
 }
 
 .footer-top-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 60px;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .footer-brand-column .footer-logo {
     height: 70px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .brand-pitch {
-    font-size: 15px;
-    color: #bbb; /* Cinza claro para leitura suave */
+    color: #aaa;
     margin-bottom: 25px;
-    text-align: justify;
+    max-width: 360px;
 }
 
 .social-badges a {
-    color: var(--gold-accent); /* ÍCONES SOCIAIS DOURADOS */
-    font-size: 20px;
-    margin-right: 20px;
-    transition: color 0.3s, transform 0.2s;
-    display: inline-block;
+    color: #fff;
+    background-color: rgba(255,255,255,0.05);
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
 .social-badges a:hover {
-    color: #fff;
+    background-color: var(--gold-accent);
+    color: var(--eco-green-dark);
     transform: translateY(-3px);
 }
 
-.footer-links-column h4, 
+.footer-links-column h4,
 .footer-contact-column h4 {
-    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-accent);
+    font-size: 20px;
     margin-bottom: 25px;
-    color: var(--gold-accent); /* TÍTULOS DOURADOS */
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .footer-links-column ul {
     list-style: none;
 }
 
-.footer-links-column ul li {
-    margin-bottom: 14px;
+.footer-links-column li {
+    margin-bottom: 12px;
 }
 
-.footer-links-column ul li a {
+.footer-links-column a {
     color: #ccc;
     text-decoration: none;
-    font-size: 15px;
     transition: color 0.3s;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 }
 
-.footer-links-column ul li a i {
-    font-size: 11px;
-    margin-right: 10px;
-    color: var(--gold-accent); /* SETINHAS DOURADAS */
+.footer-links-column a i {
+    font-size: 10px;
+    margin-right: 8px;
+    color: var(--gold-accent);
 }
 
-.footer-links-column ul li a:hover {
-    color: #fff;
+.footer-links-column a:hover {
+    color: var(--gold-accent);
 }
 
 .contact-info-item {
     display: flex;
+    margin-bottom: 20px;
     align-items: flex-start;
-    margin-bottom: 25px;
 }
 
 .contact-info-item i {
-    color: var(--gold-accent); /* ÍCONES DE CONTATO DOURADOS */
-    margin-right: 18px;
-    margin-top: 6px;
+    color: var(--gold-accent);
     font-size: 18px;
+    margin-right: 15px;
+    margin-top: 4px;
 }
 
 .contact-info-item .label {
     display: block;
-    font-size: 12px;
-    color: #999;
-    margin-bottom: 3px;
-    letter-spacing: 0.5px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
 }
 
 .contact-info-item .value {
-    font-size: 15px;
-    color: #fff; /* VALORES EM BRANCO P/ DESTAQUE */
+    color: #ccc;
+    font-weight: 500;
 }
 
 .footer-bottom {
-    border-top: 1px solid #2d3a2f;
-    margin-top: 50px;
-    padding-top: 25px;
     text-align: center;
-    font-size: 13px;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 12px;
     color: #777;
-    letter-spacing: 0.5px;
 }
 
 /* ==========================================================================
-   MEDIA QUERIES - ADAPTAÇÃO COMPLETA PARA CELULARES
+   MÍDIAS QUERIES - RESPONSIVIDADE & AJUSTE ULTRA MOBILE CRÍTICO
    ========================================================================== */
 
+/* Ajustes gerais para tablets e telas médias */
 @media (max-width: 992px) {
-    /* Menu Hambúrguer Mobile Premium */
+    .container-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-image {
+        height: 350px;
+    }
+    .footer-top-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Ajustes essenciais para Dispositivos Móveis (Celulares) */
+@media (max-width: 768px) {
+    /* 1. Ativação do Menu Hambúrguer */
     .menu-toggle {
-        display: block !important;
+        display: block;
     }
 
     .nav-menu {
@@ -761,14 +775,13 @@ body {
         width: 100%;
         height: calc(100vh - 80px);
         background-color: #ffffff;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 50px;
-        transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-        z-index: 999;
+        padding-top: 40px;
+        transition: left 0.4s ease;
+        z-index: 1100;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     }
 
     .nav-menu.active {
@@ -776,112 +789,106 @@ body {
     }
 
     .nav-menu a {
-        margin: 18px 0;
+        margin: 20px 0;
         font-size: 18px;
         width: 100%;
         text-align: center;
-        padding: 12px 0;
-        font-weight: 600;
-        color: var(--eco-green-accent);
     }
 
     .header-action {
-        display: none; /* Esconde o botão original no topo mobile */
+        display: none; /* Esconde o botão de reserva do topo no mobile */
     }
 
     .header-action-mobile {
         display: block;
         width: 80%;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .btn-nav-mobile {
         display: block;
-        text-align: center;
-        width: 100%;
-        padding: 16px !important;
-        font-size: 14px !important;
         background-color: var(--eco-green-accent);
-        color: #fff;
+        color: white !important;
+        padding: 15px;
         border-radius: 6px;
+        font-weight: 600;
+        text-align: center;
     }
 
-    /* Grid institucional em coluna única */
-    .container-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-image {
-        height: 320px;
-    }
-
-    /* Adaptação do motor de busca para bloco vertical */
+    /* 2. REFORMULAÇÃO DO BANNER PRINCIPAL (HERO) PARA DEIXAR A FOTO APARECER */
     .hero-section {
-        height: auto;
-        padding: 70px 0 50px 0;
+        height: auto; /* Permite que a seção se expanda de forma natural */
+        min-height: 380px; 
+        padding: 60px 20px 180px 20px; /* Dá espaço gigante embaixo para o motor flutuar sem sumir com o fundo */
+        margin-top: 80px;
+        justify-content: flex-start; /* Joga o texto para cima */
     }
 
+    .hero-content {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 24px; /* Diminui o texto gigante que roubava espaço */
+        line-height: 1.4;
+    }
+
+    /* 3. TRANSFORMAÇÃO DO MOTOR DE RESERVAS COMPACTO */
     .booking-bar-container {
-        position: relative;
-        bottom: 0;
+        position: absolute;
+        bottom: -150px; /* Empurra o motor ligeiramente para fora do banner, sobrepondo o início da próxima seção com elegância */
         width: 92%;
-        margin-top: 40px;
-        padding: 20px;
+        padding: 15px;
+        border-radius: 10px;
     }
 
     .booking-form {
-        flex-direction: column;
-        gap: 18px;
+        flex-direction: column; /* Transforma em uma lista vertical perfeita */
+        gap: 10px; /* Reduz o espaço perdido entre campos */
     }
 
-    .booking-field, .button-field {
+    .booking-field {
+        width: 100%; /* Ocupa a largura total da tela do celular */
+    }
+
+    .booking-field label {
+        margin-bottom: 4px; /* Gruda o label no input */
+    }
+
+    .booking-field input, 
+    .booking-field select,
+    .btn-search-booking {
+        height: 44px; /* Reduz discretamente a altura dos campos para poupar tela */
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .button-field {
         width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    html {
-        scroll-padding-top: 85px;
-    }
-    
-    .hero-content h1 {
-        font-size: 26px;
+        margin-top: 5px;
     }
 
-    .section-header h2, 
+    /* 4. COMPENSAÇÃO NA PRÓXIMA SEÇÃO */
+    /* Como o motor ficou mais alto verticalmente e avançou para baixo, aumentamos o espaçamento superior da seção "A Pousada" */
+    .about-section {
+        padding: 220px 5% 40px 5%; 
+    }
+
     .about-text h2 {
         font-size: 28px;
     }
 
-    /* Grade compacta da galeria */
+    /* 5. Ajuste da Galeria Grid no Mobile */
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 130px;
-        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas de foto por linha no celular */
+        grid-auto-rows: 140px;
+        gap: 8px;
     }
 
-    .gallery-item.large, 
+    .gallery-item.large,
     .gallery-item.tall {
         grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .gallery-overlay {
-        padding: 10px;
-    }
-
-    .gallery-overlay span {
-        font-size: 12px;
-    }
-
-    .room-price-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-    }
-
-    .btn-room-select {
-        width: 100%;
+        grid-row: span 1; /* Força tudo a ficar uniforme para não quebrar o layout */
     }
 }
